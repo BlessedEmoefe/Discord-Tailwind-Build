@@ -6,16 +6,24 @@ export const Sidebar = () => {
   return (
     <div className="fixed top-0 left-0 w-16 h-screen bg-gray-900 flex flex-col text-white shadow">
       <SideBarIcon icon={<FaFire size="28" />} />
-      {/* <Divider /> */}
+      <Divider />
       <SideBarIcon icon={<BsPlus size="32" />} />
       <SideBarIcon icon={<BsFillLightningFill size="20" />} />
       <SideBarIcon icon={<FaPoo size="20" />} />
-      {/* <Divider /> */}
+      <Divider />
       <SideBarIcon icon={<BsGearFill size="22" />} />
     </div>
   );
 };
 
-const SideBarIcon = ({ icon }) => {
-  return <div className="sidebar-icon">{icon}</div>;
+const SideBarIcon = ({ icon, text = "tooltip 💡" }) => {
+  return (
+    <div className="sidebar-icon group">
+      {icon}
+      <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
+    </div>
+  );
 };
+
+
+const Divider = () => <hr className="sidebar-hr" />;
