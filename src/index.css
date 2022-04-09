@@ -4,6 +4,6 @@
 
 @layer components {
   .sidebar-icon {
-    @apply relative flex items-center justify-center h-12 w-12;
+    @apply relative flex items-center justify-center h-12 w-12 mt-12 mb-12 mx-auto;
   }
 }
