@@ -2,7 +2,7 @@ import { Sidebar } from "./SideBar";
 
 const App = () => {
   return (
-    <div className="">
+    <div className="flex">
       <Sidebar />
     </div>
   );
